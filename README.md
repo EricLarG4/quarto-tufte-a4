@@ -31,7 +31,6 @@ Set these in the document YAML, under the `tufte-typst` format or at the top lev
 | `bibliographystyle` | unset | CSL file for citations. Not shipped as a document-level file. See Citations. |
 | `suppress-bibliography` | `true` | `true` hides the end-of-document reference list but keeps citations working. |
 | `sidecite` | `merge` | Filter option. `merge` gives one margin note per paragraph with its references. `off` gives numbered citations only. |
-
 | `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
 | `papersize` | `a4` | Page size (Quarto option). |
 | `dpi` | `300` | Resolution for pixel images (Quarto option). |
