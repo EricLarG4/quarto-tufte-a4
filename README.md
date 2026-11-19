@@ -1,6 +1,6 @@
 # quarto-tufte-a4
 
-A Quarto Typst format (`tufte-typst`) with a Tufte-style layout: margin figures,
+A Quarto Typst format (`tufte-a4-typst`) with a Tufte-style layout: margin figures,
 margin notes, compact margin citations, and ACS-style chemistry citations. It is a patched copy of the
 Typst package `toffee-tufte` 0.1.1, bundled as a Quarto extension.
 
@@ -13,13 +13,13 @@ quarto add EricLarG4/quarto-tufte-a4
 Then set the format in the YAML:
 
 ```yaml
-format: tufte-typst
+format: tufte-a4-typst
 bibliography: references.bib
 ```
 
 ## YAML options
 
-Set these in the document YAML, under the `tufte-typst` format or at the top level:
+Set these in the document YAML, under the `tufte-a4-typst` format or at the top level:
 
 | Option | Default | What it does |
 |--------|---------|--------------|

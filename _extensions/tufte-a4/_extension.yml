@@ -1,4 +1,4 @@
-title: Tufte
+title: tufte-a4
 author: Eric Largy
 version: 1.0.0
 quarto-required: ">=1.10.0"
@@ -9,7 +9,7 @@ contributes:
         - typst-template.typ
         - typst-show.typ
       default:
-        # Options documented for the tufte-typst format.
+        # Options documented for the tufte-a4-typst format.
         # `fig-cap-location: margin` must come from the DOC yaml (extension
         # defaults are not honoured by quarto's marginalia/margin-geometry
         # activation, so don't add it here).
