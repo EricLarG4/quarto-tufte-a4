@@ -21,6 +21,29 @@ bibliography: references.bib
 `chem-authors.csl` must sit in the document root: Typst rejects bibliography
 paths that contain underscores or escape the package root.
 
+## YAML options
+
+Set these in the document YAML, under the `tufte-typst` format or at the top level:
+
+| Option | Default | What it does |
+|--------|---------|--------------|
+| `fig-cap-location` | unset | `margin` puts figure captions in the margin. Set it in the document YAML, not the extension. |
+| `tbl-cap-location` | unset | `margin` puts table captions in the margin. |
+| `toc` | `false` | Shows the table of contents in the margin, not the title block. |
+| `toc-depth` | `2` | Number of heading levels in the table of contents. |
+| `section-numbering` | `"1.1.1"` | Heading numbering scheme (Quarto option). |
+| `bibliographystyle` | `chem-authors.csl` | CSL file for citations. It must sit next to the document. |
+| `suppress-bibliography` | `true` | `true` hides the end-of-document reference list but keeps citations working. |
+| `sidecite` | `merge` | Filter option. `merge` gives one margin note per paragraph with its references. `off` gives numbered citations only. |
+| `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
+| `papersize` | `a4` | Page size (Quarto option). |
+| `dpi` | `300` | Resolution for pixel images (Quarto option). |
+| `columns` | `1` | Number of text columns (Quarto option). |
+
+The `papersize`, `dpi`, `columns` and `section-numbering` options are Quarto's
+built-in settings and are not handled by the extension's own template code.
+Their effect has not been tested.
+
 ## Patches to upstream toffee-tufte
 
 - A4 page layout (`paper: "a4"`).
