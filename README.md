@@ -23,6 +23,7 @@ paths that contain underscores or escape the package root.
 
 ## Patches to upstream toffee-tufte
 
+- A4 page layout (`paper: "a4"`).
 - Body text 10 pt, title 13 pt, headings 12/11/10 pt, right margin 2.6 in.
 - `cite(style: "chem-authors.csl")` set by default.
 - Multi-key sidecite and a `toc-depth` template parameter.
