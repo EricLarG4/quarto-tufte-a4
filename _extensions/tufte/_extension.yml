@@ -19,7 +19,6 @@ contributes:
         papersize: a4                 # page geometry (overridable)
         dpi: 300                      # resolution hint for pixel images
         columns: 1                    # text columns
-        bibliographystyle: chem-authors.csl  # chemistry-style CSL (next to the doc)
         suppress-bibliography: true   # keep cite/sidecite working, hide the end list
   filters:
     - filters/sidecite.lua

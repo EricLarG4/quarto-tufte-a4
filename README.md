@@ -14,12 +14,8 @@ Then set the format in the YAML:
 
 ```yaml
 format: tufte-typst
-bibliographystyle: chem-authors.csl
 bibliography: references.bib
 ```
-
-`chem-authors.csl` must sit in the document root: Typst rejects bibliography
-paths that contain underscores or escape the package root.
 
 ## YAML options
 
@@ -32,9 +28,22 @@ Set these in the document YAML, under the `tufte-typst` format or at the top lev
 | `toc` | `false` | Shows the table of contents in the margin, not the title block. |
 | `toc-depth` | `2` | Number of heading levels in the table of contents. |
 | `section-numbering` | `"1.1.1"` | Heading numbering scheme (Quarto option). |
-| `bibliographystyle` | `chem-authors.csl` | CSL file for citations. It must sit next to the document. |
+| `bibliographystyle` | unset | CSL file for citations. Not shipped as a document-level file. See Citations. |
 | `suppress-bibliography` | `true` | `true` hides the end-of-document reference list but keeps citations working. |
 | `sidecite` | `merge` | Filter option. `merge` gives one margin note per paragraph with its references. `off` gives numbered citations only. |
+
+## Citations
+
+- Inline citations are compact numbers in square brackets, such as `[1]`.
+- Margin notes (`sidecite: merge`) list the full reference for every key cited
+  in that paragraph.
+- The end-of-document list (`suppress-bibliography: false`) uses full
+  references.
+- The same CSL file controls both the compact and full forms. The margin notes
+  use `form: "full"` and the inline marks use the default compact form.
+- The package's `lib.typ` already sets `chem-authors.csl` for citations, so you
+  don't need to set `bibliographystyle` for the chemistry style. Setting it to
+  another CSL needs that file next to the document. Not tested.
 | `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
 | `papersize` | `a4` | Page size (Quarto option). |
 | `dpi` | `300` | Resolution for pixel images (Quarto option). |
