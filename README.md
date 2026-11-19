@@ -41,9 +41,8 @@ Set these in the document YAML, under the `tufte-typst` format or at the top lev
   references.
 - The same CSL file controls both the compact and full forms. The margin notes
   use `form: "full"` and the inline marks use the default compact form.
-- The package's `lib.typ` already sets `chem-authors.csl` for citations, so you
-  don't need to set `bibliographystyle` for the chemistry style. Setting it to
-  another CSL needs that file next to the document. Not tested.
+- The package applies a default CSL style. Whether setting `bibliographystyle`
+  to another CSL file overrides it is untested.
 | `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
 | `papersize` | `a4` | Page size (Quarto option). |
 | `dpi` | `300` | Resolution for pixel images (Quarto option). |
@@ -57,7 +56,7 @@ Their effect has not been tested.
 
 - A4 page layout (`paper: "a4"`).
 - Body text 10 pt, title 13 pt, headings 12/11/10 pt, right margin 2.6 in.
-- `cite(style: "chem-authors.csl")` set by default.
+- A default citation style is set by the package.
 - Multi-key sidecite and a `toc-depth` template parameter.
 - Sans fonts limited to those usually installed (Noto Sans, Atkinson
   Hyperlegible, Segoe UI, Arial). Typst warns for each unknown family.
