@@ -32,6 +32,15 @@ Set these in the document YAML, under the `tufte-typst` format or at the top lev
 | `suppress-bibliography` | `true` | `true` hides the end-of-document reference list but keeps citations working. |
 | `sidecite` | `merge` | Filter option. `merge` gives one margin note per paragraph with its references. `off` gives numbered citations only. |
 
+| `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
+| `papersize` | `a4` | Page size (Quarto option). |
+| `dpi` | `300` | Resolution for pixel images (Quarto option). |
+| `columns` | `1` | Number of text columns (Quarto option). |
+
+The `papersize`, `dpi`, `columns` and `section-numbering` options are Quarto's
+built-in settings and are not handled by the extension's own template code.
+Their effect has not been tested.
+
 ## Citations
 
 - Inline citations are compact numbers in square brackets, such as `[1]`.
@@ -43,14 +52,6 @@ Set these in the document YAML, under the `tufte-typst` format or at the top lev
   use `form: "full"` and the inline marks use the default compact form.
 - The package applies a default CSL style. Whether setting `bibliographystyle`
   to another CSL file overrides it is untested.
-| `title`, `author`, `date`, `abstract` | none | Quarto metadata, shown on the title block. |
-| `papersize` | `a4` | Page size (Quarto option). |
-| `dpi` | `300` | Resolution for pixel images (Quarto option). |
-| `columns` | `1` | Number of text columns (Quarto option). |
-
-The `papersize`, `dpi`, `columns` and `section-numbering` options are Quarto's
-built-in settings and are not handled by the extension's own template code.
-Their effect has not been tested.
 
 ## Patches to upstream toffee-tufte
 
