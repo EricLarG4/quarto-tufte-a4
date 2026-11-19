@@ -10,12 +10,36 @@ Typst package `toffee-tufte` 0.1.1, bundled as a Quarto extension.
 quarto add EricLarG4/quarto-tufte-a4
 ```
 
-Then set the format in the YAML:
+Then set the format and the filters in the YAML. The extension's filters are not
+registered automatically, so the document must list them:
 
 ```yaml
 format: tufte-a4-typst
 bibliography: references.bib
+sidecite: merge
+suppress-bibliography: false
+full-csl: chem-full.csl
+filters:
+  - _extensions/EricLarG4/tufte-a4/filters/sidecite.lua
+  - _extensions/EricLarG4/tufte-a4/filters/biblist.lua
 ```
+
+`sidecite.lua` must come before `biblist.lua`.
+
+## Full reference list
+
+`biblist.lua` appends a numbered reference list with full references at the end
+of the document. It runs only when `suppress-bibliography: false` is set, and it
+lists every entry in the bibliography file, not only the cited ones.
+
+- The CSL file named by `full-csl` is read relative to the document, so copy
+  `_extensions/EricLarG4/tufte-a4/chem-full.csl` into the document folder, next to
+  `references.bib`. The default name is `chem-full.csl`, so you only need
+  `full-csl:` if you use another file.
+- The bibliography must be a single file (`bibliography: references.bib`). A list
+  of files is not supported.
+- Setting `suppress-bibliography: false` without `biblist.lua` in `filters:` shows
+  nothing, because Quarto's own list is suppressed.
 
 ## YAML options
 
