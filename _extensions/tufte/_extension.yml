@@ -1,0 +1,25 @@
+title: Tufte
+author: Eric Largy
+version: 1.0.0
+quarto-required: ">=1.10.0"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+      default:
+        # Options documented for the tufte-typst format.
+        # `fig-cap-location: margin` must come from the DOC yaml (extension
+        # defaults are not honoured by quarto's marginalia/margin-geometry
+        # activation, so don't add it here).
+        toc: false                    # table of contents after the title block
+        toc-depth: 2                  # TOC levels shown
+        section-numbering: "1.1.1"
+        papersize: a4                 # page geometry (overridable)
+        dpi: 300                      # resolution hint for pixel images
+        columns: 1                    # text columns
+        bibliographystyle: chem-authors.csl  # chemistry-style CSL (next to the doc)
+        suppress-bibliography: true   # keep cite/sidecite working, hide the end list
+  filters:
+    - filters/sidecite.lua
