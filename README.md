@@ -1,7 +1,7 @@
 # quarto-tufte-a4
 
 A Quarto Typst format (`tufte-typst`) with a Tufte-style layout: margin figures,
-margin notes, and ACS-style chemistry citations. It is a patched copy of the
+margin notes, compact margin citations, and ACS-style chemistry citations. It is a patched copy of the
 Typst package `toffee-tufte` 0.1.1, bundled as a Quarto extension.
 
 ## Use in a project
